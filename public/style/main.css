@@ -228,9 +228,9 @@
 
 
 .races-wrap  {
-  max-height: calc(100vh - 75px);
+  max-height: calc(100vh - 125px);
 }
 
 #abilitiesList  {
-  max-height: calc(100vh - 100px);
+  max-height: calc(100vh - 150px);
 }
