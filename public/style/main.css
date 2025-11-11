@@ -226,8 +226,11 @@
   max-height: 43px !important;
  }
 
- @media (max-width: 992px) {
-  .races-wrap, #abilitiesList  {
-    margin-bottom: 100px !important;
-  }
+
+.races-wrap  {
+  max-height: calc(100vh - 75px);
+}
+
+#abilitiesList  {
+  max-height: calc(100vh - 100px);
 }
