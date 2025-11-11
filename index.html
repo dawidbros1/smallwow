@@ -15,7 +15,7 @@
   <!-- LEFT: races + legendary -->
   <div class="left">
     <!-- RACES -->
-    <div class="races-wrap" aria-label="Rasy">
+    <div class="races-wrap" aria-label="Rasy" style="position: relative;">
       <div class="races-columns">
         <!-- categories injected here -->
         <div class="category">
@@ -31,54 +31,11 @@
           <div class="category-list" data-faction="Neutralni"></div>
         </div>
       </div>
-    </div>
 
-    <!-- LEGENDARNE - sloty -->
-    <div class="legendary-area">
-      <div class="legendary-header">
-        <h3 style="margin:0">Legendarne Miejsca i Artefakty</h3>
-        <div style="display:flex;gap:8px;align-items:center">
-          <button class="btn ghost" id="showAllArtifacts">Pokaż wszystkie artefakty</button>
-        </div>
+      <div style = "position: absolute; right: 10px; bottom: 10px;">
+          <button class="btn" id="showAllArtifacts">Pokaż artefakty</button>
       </div>
-
-      <div class="legendary-slots">
-        <div class="slot" data-slot-index="0">
-          <div class="slot-left" data-slot-img>+</div>
-          <div class="slot-body">
-            <h3 data-slot-title>Wybierz artefakt</h3>
-            <p data-slot-desc>Kliknij + aby wybrać legendarne miejsce lub artefakt.</p>
-          </div>
-          <div class="slot-actions">
-            <button class="btn ghost slot-open">Wybierz</button>
-            <button class="btn btn-remove" style="display:none" title="Usuń" data-remove>🗑</button>
-          </div>
-        </div>
-
-        <div class="slot" data-slot-index="1">
-          <div class="slot-left" data-slot-img>+</div>
-          <div class="slot-body">
-            <h3 data-slot-title>Wybierz artefakt</h3>
-            <p data-slot-desc>Kliknij + aby wybrać legendarne miejsce lub artefakt.</p>
-          </div>
-          <div class="slot-actions">
-            <button class="btn ghost slot-open">Wybierz</button>
-            <button class="btn btn-remove" style="display:none" title="Usuń" data-remove>🗑</button>
-          </div>
-        </div>
-
-        <div class="slot" data-slot-index="2">
-          <div class="slot-left" data-slot-img>+</div>
-          <div class="slot-body">
-            <h3 data-slot-title>Wybierz artefakt</h3>
-            <p data-slot-desc>Kliknij + aby wybrać legendarne miejsce lub artefakt.</p>
-          </div>
-          <div class="slot-actions">
-            <button class="btn ghost slot-open">Wybierz</button>
-            <button class="btn btn-remove" style="display:none" title="Usuń" data-remove>🗑</button>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
 

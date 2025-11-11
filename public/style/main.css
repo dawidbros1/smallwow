@@ -184,13 +184,14 @@
  .modal {
    background:#fff;
    border-radius:10px;
-   max-width:1200px;
+   max-width:90vw;
    width:92%;
    max-height:90vh;
    overflow:auto;
    padding:14px;
    box-sizing:border-box;
    position:relative;
+   margin: 10px;
  }
  .modal .close { position:absolute; top:8px; right:10px; cursor:pointer; font-size:20px; color:#666; }
  .modal h2 { margin:0 0 12px 0; font-size:18px; }
@@ -219,3 +220,7 @@
    display: none !important;
  }
  
+ .race-info > p, .a-text > div {
+  overflow: hidden;
+  max-height: 43px !important;
+ }

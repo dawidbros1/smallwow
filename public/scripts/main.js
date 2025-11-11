@@ -351,9 +351,9 @@ function renderArtifactGrid(containerSelector, selectable=true) {
         }
       });
     } else {
-      $card.on('click', function(){
-        showModal(renderDetailHtml(a.name, a.description, a.image_url));
-      });
+      // $card.on('click', function(){
+      //   showModal(renderDetailHtml(a.name, a.description, a.image_url));
+      // });
     }
   });
   $ct.append($grid);
