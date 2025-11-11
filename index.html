@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Rasy / Zdolności / Artefakty — panel</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<link rel="stylesheet" href="public/style/main.css">
+
+</head>
+<body>
+
+<div class="app">
+  <!-- LEFT: races + legendary -->
+  <div class="left">
+    <!-- RACES -->
+    <div class="races-wrap" aria-label="Rasy">
+      <div class="races-columns">
+        <!-- categories injected here -->
+        <div class="category">
+          <h2>Przymierze</h2>
+          <div class="category-list" data-faction="Przymierze"></div>
+        </div>
+        <div class="category">
+          <h2>Horda</h2>
+          <div class="category-list" data-faction="Horda"></div>
+        </div>
+        <div class="category">
+          <h2>Neutralni</h2>
+          <div class="category-list" data-faction="Neutralni"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEGENDARNE - sloty -->
+    <div class="legendary-area">
+      <div class="legendary-header">
+        <h3 style="margin:0">Legendarne Miejsca i Artefakty</h3>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button class="btn ghost" id="showAllArtifacts">Pokaż wszystkie artefakty</button>
+        </div>
+      </div>
+
+      <div class="legendary-slots">
+        <div class="slot" data-slot-index="0">
+          <div class="slot-left" data-slot-img>+</div>
+          <div class="slot-body">
+            <h3 data-slot-title>Wybierz artefakt</h3>
+            <p data-slot-desc>Kliknij + aby wybrać legendarne miejsce lub artefakt.</p>
+          </div>
+          <div class="slot-actions">
+            <button class="btn ghost slot-open">Wybierz</button>
+            <button class="btn btn-remove" style="display:none" title="Usuń" data-remove>🗑</button>
+          </div>
+        </div>
+
+        <div class="slot" data-slot-index="1">
+          <div class="slot-left" data-slot-img>+</div>
+          <div class="slot-body">
+            <h3 data-slot-title>Wybierz artefakt</h3>
+            <p data-slot-desc>Kliknij + aby wybrać legendarne miejsce lub artefakt.</p>
+          </div>
+          <div class="slot-actions">
+            <button class="btn ghost slot-open">Wybierz</button>
+            <button class="btn btn-remove" style="display:none" title="Usuń" data-remove>🗑</button>
+          </div>
+        </div>
+
+        <div class="slot" data-slot-index="2">
+          <div class="slot-left" data-slot-img>+</div>
+          <div class="slot-body">
+            <h3 data-slot-title>Wybierz artefakt</h3>
+            <p data-slot-desc>Kliknij + aby wybrać legendarne miejsce lub artefakt.</p>
+          </div>
+          <div class="slot-actions">
+            <button class="btn ghost slot-open">Wybierz</button>
+            <button class="btn btn-remove" style="display:none" title="Usuń" data-remove>🗑</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: abilities -->
+  <div class="right">
+    <h3 style="margin:0 0 6px 0">Zdolności</h3>
+    <div class="abilities" id="abilitiesList">
+      <!-- abilities injected here -->
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: details (rasa / ability / artifact) -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" role="dialog" aria-modal="true">
+    <span class="close" id="modalClose">&times;</span>
+    <div id="modalInner">
+      <!-- injected content -->
+    </div>
+  </div>
+</div>
+
+<script src="public/scripts/main.js"></script> 
+
+
+</body>
+</html>

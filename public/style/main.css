@@ -1,0 +1,231 @@
+ /* --- Reset & layout --- */
+ html,body { height:100%; margin:0; padding:0; overflow:hidden; font-family:Arial, sans-serif; background:#f4f6f8; }
+ .app {
+   display:flex;
+   height:100vh;
+   box-sizing:border-box;
+ }
+
+ /* Left (75%) and Right (25%) columns */
+ .left {
+   width:75%;
+   display:flex;
+   flex-direction:column;
+   padding:12px;
+   gap:12px;
+   box-sizing:border-box;
+ }
+ .right {
+   width:25%;
+   padding:12px;
+   box-sizing:border-box;
+   background:#fbfcfd;
+   border-left:1px solid rgba(0,0,0,0.06);
+   display:flex;
+   flex-direction:column;
+ }
+
+ /* --- RACES area (scrollable) --- */
+ .races-wrap {
+   background:#fff;
+   border-radius:10px;
+   padding:12px;
+   box-shadow:0 2px 8px rgba(0,0,0,0.06);
+   display:flex;
+   gap:12px;
+   /* we'll let this take most of left column but leave room for 'legendary' below */
+   flex:1 1 auto;
+   box-sizing:border-box;
+   overflow:hidden;
+ }
+ .races-columns {
+   display:flex;
+   width:100%;
+   gap:12px;
+ }
+ .category {
+   flex:1 1 0;
+   min-width:0;
+   background:#fff;
+   border-radius:8px;
+   padding:10px;
+   box-shadow:inset 0 0 0 1px rgba(0,0,0,0.02);
+   display:flex;
+   flex-direction:column;
+   height:100%;
+   box-sizing:border-box;
+ }
+ .category h2 {
+   margin:0 0 8px 0;
+   font-size:16px;
+   text-align:center;
+   border-bottom:1px solid #eee;
+   padding-bottom:8px;
+ }
+
+ /* inside each category we keep a scroll if content too long */
+ .category-list {
+   overflow:auto;
+   padding-right:6px; /* room for scrollbar */
+ }
+
+ .race {
+   display:flex;
+   align-items:center;
+   gap:10px;
+   padding:6px 2px;
+   border-radius:6px;
+ }
+ .race:hover { background:rgba(0,123,255,0.03); }
+ .race-thumb {
+   width:56px;
+   height:56px;
+   border-radius:8px;
+   background:#eee;
+   flex:0 0 56px;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   overflow:hidden;
+ }
+ .race-thumb img { width:100%; height:100%; object-fit:cover; display:block; }
+ .race-info { flex:1 1 auto; min-width:0; }
+ .race-info h3 { margin:0; font-size:14px; }
+ .race-info p { margin:3px 0 0 0; font-size:12px; color:#555; overflow:hidden; text-overflow:ellipsis; }
+ .race-actions { flex:0 0 28px; text-align:center; cursor:pointer; color:#007bff; font-weight:600; }
+
+ /* --- LEGENDARIES area (fixed height under races) --- */
+ .legendary-area {
+   background:#fff;
+   border-radius:10px;
+   padding:12px;
+   box-shadow:0 2px 8px rgba(0,0,0,0.06);
+   box-sizing:border-box;
+   height:230px; /* fixed height so whole layout fits on 1 screen */
+   display:flex;
+   flex-direction:column;
+   gap:10px;
+ }
+ .legendary-header { display:flex; justify-content:space-between; align-items:center; }
+ .legendary-slots { display:flex; gap:12px; height:100%; align-items:flex-start; }
+ .slot {
+   flex:1 1 0;
+   min-width:0;
+   background:#f9fbff;
+   border-radius:8px;
+   padding:10px;
+   display:flex;
+   gap:10px;
+   align-items:flex-start;
+   position:relative;
+   box-shadow:inset 0 0 0 1px rgba(0,0,0,0.02);
+ }
+ .slot .slot-left {
+   width:80px;
+   height:80px;
+   border-radius:8px;
+   background:#fff;
+   border:2px dashed rgba(0,0,0,0.06);
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   font-size:28px;
+   color:#999;
+   flex:0 0 80px;
+   overflow:hidden;
+ }
+ .slot img { width:100%; height:100%; object-fit:cover; display:block; }
+ .slot .slot-body { flex:1 1 auto; min-width:0; }
+ .slot .slot-body h3 { margin:0; font-size:14px; }
+ .slot .slot-body p { margin:12px 0 0 0; font-size:12px; color:#444; overflow:hidden; text-overflow:ellipsis; max-height:5.6em; }
+ .slot .slot-actions { position:absolute; top:6px; right:6px; display:flex; gap:6px; }
+ .btn {
+   padding:6px 10px;
+   border-radius:8px;
+   border:0;
+   cursor:pointer;
+   background:#007bff;
+   color:white;
+   font-size:13px;
+ }
+ .btn.ghost { background:#eef3ff; color:#007bff; border:1px solid rgba(0,123,255,0.12); }
+
+ /* --- ABILITIES column (right) --- */
+ .abilities {
+   display:flex;
+   flex-direction:column;
+   gap:10px;
+   flex:1 1 auto;
+   overflow:auto;
+   padding-bottom:12px;
+ }
+ .ability {
+   display:flex;
+   gap:10px;
+   align-items:center;
+   padding:8px;
+   background:#fff;
+   border-radius:8px;
+   box-shadow:inset 0 0 0 1px rgba(0,0,0,0.02);
+ }
+ .ability img { width:56px; height:56px; border-radius:8px; object-fit:cover; }
+ .ability .a-text { font-size:13px; color:#333; }
+
+ /* --- Modal (centered) --- */
+ .modal-backdrop {
+   display:none;
+   position:fixed;
+   left:0; top:0; width:100%; height:100%;
+   background:rgba(0,0,0,0.55);
+   z-index:9999;
+   align-items:center;
+   justify-content:center;
+ }
+ .modal {
+   background:#fff;
+   border-radius:10px;
+   max-width:1200px;
+   width:92%;
+   max-height:90vh;
+   overflow:auto;
+   padding:14px;
+   box-sizing:border-box;
+   position:relative;
+ }
+ .modal .close { position:absolute; top:8px; right:10px; cursor:pointer; font-size:20px; color:#666; }
+ .modal h2 { margin:0 0 12px 0; font-size:18px; }
+
+ /* artifact grid in modal: 3 columns */
+ .art-grid {
+   display:grid;
+   grid-template-columns:repeat(3,1fr);
+   gap:10px;
+ }
+ .art-card {
+   background:#fafafa;
+   border-radius:8px;
+   padding:8px;
+   display:flex;
+   gap:8px;
+   align-items:flex-start;
+   cursor:pointer;
+   box-shadow:inset 0 0 0 1px rgba(0,0,0,0.02);
+ }
+ .art-card img { width:72px; height:72px; border-radius:8px; object-fit:cover; flex:0 0 72px; }
+ .art-card h3 { margin:0; font-size:14px; }
+ .art-card p { margin:6px 0 0 0; font-size:12px; color:#444; }
+
+ /* small screens - keep layout usable on tablet */
+ @media (max-width:900px) {
+   .app { flex-direction:column; }
+   .left, .right { width:100%; }
+   .races-wrap { flex:1 1 60vh; }
+   .legendary-area { height:260px; }
+   .abilities { max-height:36vh; }
+   .races-wrap .races-columns { flex-direction:row; } /* keep columns horizontally scrollable inside */
+ }
+
+ .slot-body > h3, button.slot-open, button.btn-remove, .race-actions {
+   display: none !important;
+ }
+ 
