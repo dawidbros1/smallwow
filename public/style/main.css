@@ -215,16 +215,6 @@
  .art-card h3 { margin:0; font-size:14px; }
  .art-card p { margin:6px 0 0 0; font-size:12px; color:#444; }
 
- /* small screens - keep layout usable on tablet */
- @media (max-width:900px) {
-   .app { flex-direction:column; }
-   .left, .right { width:100%; }
-   .races-wrap { flex:1 1 60vh; }
-   .legendary-area { height:260px; }
-   .abilities { max-height:36vh; }
-   .races-wrap .races-columns { flex-direction:row; } /* keep columns horizontally scrollable inside */
- }
-
  .slot-body > h3, button.slot-open, button.btn-remove, .race-actions {
    display: none !important;
  }
