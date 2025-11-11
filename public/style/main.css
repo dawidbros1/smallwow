@@ -226,7 +226,7 @@
   max-height: 43px !important;
  }
 
- @media (max-width: 600px) {
+ @media (max-width: 992px) {
   .races-wrap, #abilitiesList  {
     margin-bottom: 100px;
   }
